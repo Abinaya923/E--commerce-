@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <div class="row border-bottom p-5">
+    <div class="col-12 d-flex justify-content-between align-items-center">
+        <h5 class="text-primary">CheckOut</h5>
+        <a href="app.html" class="btn btn-outline-primary">Back to Shop</a>
+    </div>
+  </div>
+  
+ 
+  <div class="row m-5 d-flex justify-content-center">
+    <div class="col-10 col-md-6 col-lg-4">
+        <div class="card text-start p-3">
+            <h5 class="mb-3 text-center">Payment Details</h5>
+
+            <div class="mb-3">
+                <label class="form-label">Full Name</label>
+                <input id="name" type="text" class="form-control" placeholder="Enter Your Name"/>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Card Number</label>
+                <input id="card" type="text" maxlength="16" class="form-control" placeholder="Card Number"/>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">CVV</label>
+                <input id="cvv" type="password" maxlength="3" class="form-control" placeholder="***"/>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Billing Address</label>
+                <textarea rows="2" class="form-control"></textarea>
+            </div>
+
+     
+            <button id="pay" type="button" class="btn btn-success w-100">Pay Now</button>
+        </div>
+    </div>
+  </div>
+
+ 
+  <script>
+    const name = document.getElementById("name");
+    const card = document.getElementById("card");
+    const cvv = document.getElementById("cvv");
+    const pay = document.getElementById("pay");
+
+    pay.addEventListener("click", (e) => {
+      e.preventDefault(); 
+
+      if (name.value.trim() === "" || card.value.trim() === "" || cvv.value.trim() === "") {
+        alert("Input fields can't be empty");
+        return;
+      }
+      if (card.value.length !== 16 || isNaN(card.value)) {
+        alert("Invalid Card Number");
+        return;
+      }
+      if (cvv.value.length !== 3 || isNaN(cvv.value)) {
+        alert("Invalid CVV");
+        return;
+      }
+
+     
+      window.location.href = "suc.html";
+    });
+  </script>
+
+</body>
+</html>

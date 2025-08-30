@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>E-commerce</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <div class="row align-items-center p-3 border-bottom">
+    <div class="col-md-8">
+      <input type="text" class="form-control rounded-pill border border-primary" placeholder="Search products...">
+    </div>
+    <div class="col-md-4">
+      <nav class="navbar navbar-expand">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+  
+    <div id="left-bar" class="col-2 border border-primary p-5" style="height:85vh; overflow-y:auto;">
+
+    
+      <div id="size-filter" class="mb-5">
+        <h5>Sizes</h5>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="S"/>
+          <label class="form-check-label">S</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="M"/>
+          <label class="form-check-label">M</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="L"/>
+          <label class="form-check-label">L</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="XL"/>
+          <label class="form-check-label">XL</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="XXL"/>
+          <label class="form-check-label">XXL</label>
+        </div>
+      </div>
+
+     
+      <div id="price-filter" class="mb-5">
+        <h5>Price</h5>
+        <input id="price-range" type="range" class="form-range" min="0" max="1500" step="100" value="1500"/>
+        <div class="d-flex justify-content-between">
+          <span>0</span>
+          <span id="price-value">1500</span>
+        </div>
+      </div>
+
+    
+      <div id="brand-filter" class="mb-5">
+        <h5>Brand</h5>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input"/>
+          <label class="form-check-label">Otto</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input"/>
+          <label class="form-check-label">H&M</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input"/>
+          <label class="form-check-label">Levi's</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input"/>
+          <label class="form-check-label">Nike</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input"/>
+          <label class="form-check-label">Zara</label>
+        </div>
+      </div>
+
+     
+      <div id="material-filter" class="mb-0">
+        <h5>Material</h5>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input"/>
+          <label class="form-check-label">Cotton</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input"/>
+          <label class="form-check-label">Polyster</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input"/>
+          <label class="form-check-label">Lycra</label>
+        </div>
+        <div class="form-check mt-5">
+          <button id="apply-filters" class="btn btn-primary">Add Filters</button>
+        </div>
+      </div>
+
+    </div>
+    
+     <div class="col-9 ">
+      <div class="row row-cols-4 g-4">
+
+     
+               <div class="col">
+                <div class="card product-card" style="height:350px; cursor:pointer;"
+       data-name="Cotton Checkered"
+       data-price="695"
+       data-sizes="M,  L,  XXL,  S"
+       data-brand="Zara"
+       data-material="Cotton"
+       data-img="images/Cotton Check Shirt.png"
+   >
+  
+  <img src="images/Cotton Check Shirt.png" alt="img" class="card" style="max-height:250px; width:100%; object-fit:contain;">
+  <div class="card-body text-center">
+
+    <div class="details">
+    <h5 class="card-title mb-0">Cotton Checkered</h5>
+    <p class="mb-0">Size: M,  L,  XXL,  S</p>
+    <p class="mb-0">Rs.695</p>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+ <div class="col">
+   <div class="card product-card" style="height:350px; cursor:pointer;"
+       data-name="Lenin Shirt"
+       data-price="780"
+       data-sizes="M,  L,  XL"
+       data-brand="Nike"
+       data-material="Lenin"
+       data-img="images/lenin.png"
+   >
+  
+  <img src="images/lenin.png" alt="img" class="card" style="max-height:250px; width:100%; object-fit:contain;">
+  <div class="card-body text-center">
+
+    <div class="details">
+    <h5 class="card-title mb-0">Lenin Shirt</h5>
+    <p class="mb-0">Size: M,  L,  XL</p>
+    <p class="mb-0">Rs.780</p>
+    </div>
+  </div>
+  </div>
+</div>
+      
+
+
+ <div class="col">
+   <div class="card product-card" style="height:350px; cursor:pointer;"
+       data-name="Lycra Shirt"
+       data-price="467"
+       data-sizes=" L,  XXL,  S,  XL"
+       data-brand="Otto"
+       data-material="Lycra"
+       data-img="images/lycra.png"
+   >
+  
+  <img src="images/lycra.png" alt="img" class="card" style="max-height:250px; width:100%; object-fit:contain;">
+  <div class="card-body text-center">
+
+    <div class="details">
+    <h5 class="card-title mb-0">Lycra Shirt</h5>
+    <p class="mb-0">Size:   L,  XXL,  S,  XL</p>
+    <p class="mb-0">Rs.467</p>
+    </div>
+  </div>
+  </div>
+</div>
+
+ <div class="col">
+    <div class="card product-card" style="height:350px; cursor:pointer;"
+       data-name="Floral Shirt"
+       data-price="386"
+       data-sizes=" M,  L,  S "
+       data-brand="H&M"
+       data-material="Polyster"
+       data-img="images/floral.png"
+   >
+  
+  <img src="images/floral.png" alt="img" class="card" style="max-height:250px; width:100%; object-fit:contain;">
+  <div class="card-body text-center">
+
+    <div class="details">
+    <h5 class="card-title mb-0">Floral Shirt</h5>
+    <p class="mb-0">Size: M,  L,  S</p>
+    <p class="mb-0">Rs.386</p>
+    </div>
+  </div>
+  </div>
+</div>
+
+ <div class="col">
+   <div class="card product-card" style="height:350px; cursor:pointer;"
+       data-name="White Shirt"
+       data-price="698"
+       data-sizes=" M,  XL,  S "
+       data-brand="Otto"
+       data-material="Polyster"
+       data-img="images/oldmoney.png"
+   >
+  
+  <img src="images/oldmoney.png" alt="img" class="card" style="max-height:250px; width:100%; object-fit:contain;">
+  <div class="card-body text-center">
+
+    <div class="details">
+    <h5 class="card-title mb-0">White Shirt</h5>
+    <p class="mb-0">Size: M,  XL,  S</p>
+    <p class="mb-0">Rs.698</p>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+ <div class="col">
+   <div class="card product-card" style="height:350px; cursor:pointer;"
+       data-name="Cotton Shirt"
+       data-price="546"
+       data-sizes="L,  XXL,  S"
+       data-brand="Nike"
+       data-material="Cotton"
+       data-img="images/florals.png"
+   >
+  
+  <img src="images/florals.png" alt="img" class="card" style="max-height:250px; width:100%; object-fit:contain;">
+  <div class="card-body text-center">
+
+    <div class="details">
+    <h5 class="card-title mb-0">Cotton Shirt</h5>
+    <p class="mb-0">Size:  L,  XXL,  S</p>
+    <p class="mb-0">Rs.546</p>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+ <div class="col">
+  <div class="card product-card" style="height:350px; cursor:pointer;"
+       data-name="Cotton Silk Shirt"
+       data-price="435"
+       data-sizes="S,  XL"
+       data-brand="Levi's"
+       data-material="Cotton"
+       data-img="images/silk.png"
+   >
+  
+  
+  <img src="images/silk.png" alt="img" class="card" style="max-height:250px; width:100%; object-fit:contain;">
+  <div class="card-body text-center">
+
+    <div class="details">
+    <h5 class="card-title mb-0">Cotton Silk Shirt</h5>
+    <p class="mb-0">Size: S,  XL</p>
+    <p class="mb-0">Rs.435</p>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+ <div class="col">
+  <div class="card product-card" style="height:350px; cursor:pointer;"
+       data-name="Baggy Pant"
+       data-price="876"
+       data-sizes="M,  S,  L"
+       data-brand="Zara"
+       data-material="Polyster"
+       data-img="images/baggy.png"
+   >
+  
+  <img src="images/baggy.png" alt="img" class="card" style="max-height:250px; width:100%; object-fit:contain;">
+  <div class="card-body text-center">
+
+    <div class="details">
+    <h5 class="card-title mb-0">Baggy Pant</h5>
+    <p class="mb-0">Size: M,  S,  L</p>
+    <p class="mb-0">Rs.876</p>
+    </div>
+  </div>
+  </div>
+</div>
+      
+        
+
+
+         
+
+            
+         
+
+          <div class="col-12 ">
+            <nav>
+  <ul class="pagination d-flex justify-content-end gap-2">
+   
+    <li class="page-item active"><a class="page-link" href="app.html">Page 1</a></li>
+    <li class="page-item"><a class="page-link" href="app1.html">2</a></li>
+    <li class="page-item"><a class="page-link" href="app2.html">3</a></li>
+  </ul>
+</nav>
+
+          </div>
+          </div>
+      </div>
+     </div>
+
+     
+<script>
+ 
+  document.querySelectorAll(".product-card").forEach(card=>{
+    card.addEventListener('click',()=>{
+      const product={
+        name:card.dataset.name,
+        price:card.dataset.price,
+        sizes:card.dataset.sizes.split(","),
+        brand:card.dataset.brand,
+        material:card.dataset.material,
+        img:card.dataset.img
+      };
+      localStorage.setItem("selectedProduct",JSON.stringify(product));
+      window.location.href="cartdetails.html";
+    })
+  });
+
+
+  const priceRange=document.getElementById("price-range");
+  const priceValue=document.getElementById("price-value");
+  priceRange.addEventListener("input",()=>priceValue.textContent=priceRange.value);
+
+ 
+  document.getElementById("apply-filters").addEventListener("click",()=>{
+    const selectedSizes=Array.from(document.querySelectorAll('#size-filter input:checked')).map(cb=>cb.value);
+    const selectedBrands=Array.from(document.querySelectorAll('#brand-filter input:checked')).map(cb=>cb.nextElementSibling.textContent.trim());
+    const selectedMaterials=Array.from(document.querySelectorAll('#material-filter input:checked')).map(cb=>cb.nextElementSibling.textContent.trim());
+    const priceMax=parseInt(priceRange.value);
+
+    document.querySelectorAll(".product-card").forEach(card=>{
+      const price=parseInt(card.dataset.price);
+      const sizes=card.dataset.sizes.split(",").map(s=>s.trim());
+      const brand=card.dataset.brand;
+      const material=card.dataset.material;
+
+      let show=true;
+      if(selectedSizes.length && !selectedSizes.some(size=>sizes.includes(size))) show=false;
+      if(selectedBrands.length && !selectedBrands.includes(brand)) show=false;
+      if(selectedMaterials.length && !selectedMaterials.includes(material)) show=false;
+      if(price > priceMax) show=false;
+
+      card.parentElement.style.display=show?"block":"none";
+    });
+  });
+</script>
+  
+ 
+</body>
+</html>   
